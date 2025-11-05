@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Crie suas postagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Blog Post</h1>
+            <p>Crie e compartilhe suas postagens com o mundo</p>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Criar Nova Postagem</h2>
+                
+                <div class="success-message" id="success-message">
+                    ✅ Postagem criada com sucesso! Sua postagem foi publicada.
+                </div>
+
+                <div class="error-message" id="error-message">
+                    ❌ Erro ao criar postagem. Tente novamente.
+                </div>
+
+                <form class="post-form" id="post-form">
+                    <div class="form-group">
+                        <label for="titulo">Título da Postagem:</label>
+                        <input 
+                            type="text" 
+                            id="titulo" 
+                            placeholder="Digite um título interessante..."
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conteudo">Conteúdo:</label>
+                        <textarea 
+                            id="conteudo" 
+                            placeholder="Escreva seu conteúdo aqui... Compartilhe suas ideias, experiências ou conhecimentos."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        Publicar Postagem
+                    </button>
+                </form>
+
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Publicando sua postagem...</p>
+                </div>
+            </section>
+
+            <section class="result-section">
+                <h2>📖 Sua Postagem Publicada</h2>
+                <div class="post-result">
+                    <h3 id="renderizador-titulo">Sua postagem aparecerá aqui...</h3>
+                    <p id="renderizador-conteudo">Após publicar, o título e conteúdo da sua postagem serão exibidos nesta seção.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Blog Post - Conectando ideias através das palavras</p>
+            <p>Desenvolvido com ❤️ para compartilhar conhecimento</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
